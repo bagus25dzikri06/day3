@@ -33,7 +33,29 @@ function invokeSpell (input) {
   ];
 
   // your code here
- 
+  if (input === 'qqq') {
+    return spells[0].spellName
+  } else if ((input === 'eww') || (input === 'wew')|| (input === 'wwe')) {
+    return spells[1].spellName
+  } else if ((input === 'eeq') || (input === 'eqe')|| (input === 'qee')) {
+    return spells[2].spellName
+  } else if (input === 'eee') {
+    return spells[3].spellName
+  } else if ((input === 'qww') || (input === 'wqw')|| (input === 'wwq')) {
+    return spells[4].spellName
+  } else if (input === 'www') {
+    return spells[5].spellName
+  } else if ((input === 'eew') || (input === 'ewe')|| (input === 'wee')) {
+    return spells[6].spellName
+  } else if ((input === 'eqw') || (input === 'ewq')|| (input === 'qew') || (input === 'qwe') || (input === 'weq') || (input === 'wqe')) {
+    return spells[7].spellName
+  } else if ((input === 'eqq') || (input === 'qeq')|| (input === 'qqe')) {
+    return spells[8].spellName
+  } else if ((input === 'eqq') || (input === 'qeq')|| (input === 'qqe')) {
+    return spells[9].spellName
+  } else {
+    return 'The combination does not exist'
+  } 
 }
 
 console.log(invokeSpell('qwe')); // Deafening Blast
