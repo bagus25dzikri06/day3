@@ -35,7 +35,31 @@
 
 function ganjilGenapAsianGames ( date, data ) {
   // Your code here
-  
+  if ((date >= 1) && (date <= 31)) {
+     var dataNopol = []
+	 for (var angka = 0; angka < data.length; angka++){
+	   if ((data[angka].type === 'Mobil') || (data[angka].type === 'Convertible') || (data[angka].type === 'Coupe') || (data[angka].type === 'Sedan') || (data[angka].type === 'Hatchback') || (data[angka].type === 'Station Wagon') || (data[angka].type === 'SUV') || (data[angka].type === 'MPV')) {
+		 /* Mengambil nomor kendaraan dari plat mobil */
+		 var nopolArray = data[angka].plat.split(' ')
+		 var nomorKendaraan = nopolArray[1]
+
+		 dataNopol.push(nomorKendaraan)
+	   }
+	 }
+
+     /* Menghitung jumlah kendaraan yang melanggar aturan ganjil genap selama Asian Games */
+	 var jumlahKendaraan = 0
+	 for( var i = 0; i < dataNopol.length; i++){
+	   if ((date % 2 === 0) && (dataNopol[i] % 2 !== 0)){
+		  jumlahKendaraan++
+	   } else if((date % 2 !== 0) && (dataNopol[i] % 2 === 0)){
+		  jumlahKendaraan++
+	   }
+	 }
+	 return jumlahKendaraan
+  } else {
+	 return "Invalid dates"
+  }
 }
 
 
