@@ -15,7 +15,8 @@ function digitPerkalianMinimum(angka) {
    for (var i = 0; i < faktorBil.length / 2; i++) {
       faktorBil1.push(faktorBil[i] + '' + faktorBil[faktorBil.length - 1 - i])
    }
-
+   
+   /* Himpunan panjang masing-masing string perkalian beserta urutannya */
    for (var j = 0; j < faktorBil1.length; j++) {
       panjangFaktor.push(faktorBil[j].length)
    }
